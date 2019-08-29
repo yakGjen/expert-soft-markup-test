@@ -58,6 +58,7 @@ body {
   box-sizing: border-box;
   background: grey;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .main__content__item__info {
@@ -98,6 +99,29 @@ body {
   cursor: pointer;
 }
 
+.main__content__item__description {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all 0.3s 0s linear;
+  transition: all 0.3s 0s linear;
+}
+
+.main__content__item__description > div {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  background: lightgrey;
+  border-radius: 50%;
+}
+
 .footer {
   padding: 5px 20px;
   -webkit-box-sizing: border-box;
@@ -115,4 +139,9 @@ body {
   position: relative;
   bottom: 0;
   opacity: 1;
+}
+
+.main__content__item:hover .main__content__item__description {
+  right: 10px;
+  top: 10px;
 }
